@@ -1,19 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <!-- Content: Navigation - Build a simple navigation with 4 items of your choosing -->
+    <header>
+      <nav>
+        <h1 class="navigation">Victor Tran</h1>
+        <div class="navigation">Home</div>
+        <div class="navigation">About</div>
+        <div class="navigation">Portfolio</div>
+        <div class="navigation">Contact</div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Content: Intro - Have a short introduction as to why you would be a good hire -->
+      <section class="intro">
+        <p>
+          I am a fairly competent full-stack web developer well versed in the
+          following tech stacks:
+        </p>
+        <!--  Content: Skills - Showcase a list of skills you have somewhere on your resume -->
+        <section class="tech-stack server">Sequelize + PostgreSQL</section>
+        <section class="tech-stack front">ReactJS</section>
+        <section class="tech-stack server">GraphQL</section>
+        <section class="tech-stack server">NodeJS + Apollo Server</section>
+      </section>
+
+      <!-- Content: Work History - Showcase your work history somewhere on your resume -->
+      <section class="work-history grid">
+        <section class="grid-a date">Date</section>
+        <section class="grid-b employer-name">Location</section>
+        <section class="grid-c work-title">Title</section>
+        <section class="grid-d tech-use">Tech Use</section>
+      </section>
+    </main>
+  </body>
 </html>

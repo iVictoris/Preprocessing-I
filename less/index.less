@@ -598,6 +598,8 @@ body {
     .intro {
       p {
         font-size: 2rem;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -624,7 +626,7 @@ body {
         .tech-stack {
           font-size: 2rem;
           width: 35%;
-          padding: .5rem;
+          padding: 0.5rem;
         }
       }
       .work-history {
@@ -640,6 +642,24 @@ body {
           width: 100%;
           .flex-stack-center();
           align-items: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    main {
+      .work-history {
+        .mobile {
+          .job {
+            header {
+              font-size: 2.25rem;
+            }
+
+            section {
+              font-size: 2rem;
+            }
+          }
         }
       }
     }
@@ -668,6 +688,7 @@ body {
         div.navigation:hover {
           color: white;
           font-size: 3rem;
+          padding: 1rem
         }
       }
     }
@@ -679,9 +700,12 @@ body {
         font-size: 4rem;
         background: rgb(56, 147, 255);
         color: rgb(255, 255, 255);
+        & > p {
+          width: 100%;
+        }
         .tech-stack {
           font-size: 3rem;
-          width: 22%;
+          width: 26%;
           margin-right: 3rem;
           background: rgb(255, 255, 255);
           color: rgb(0, 3, 7);
@@ -708,6 +732,7 @@ body {
       }
     }
   }
+
   @media only screen and (min-width: 1100px) {
     .main-section-header {
       font-size: 4rem;
@@ -734,10 +759,21 @@ body {
         .mobile {
           .job {
             width: 29%;
-            font-size: 2.1rem;
-            padding: 3rem;
+            font-size: 2rem;
+            padding: 2rem;
+          }
+
+          section {
+            &:last-child {
+              padding: 0 3rem;
+              &>p {
+                font-size: 2rem;
+              }
+            }
           }
         }
+
+
       }
 
       .contact {

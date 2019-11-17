@@ -512,6 +512,8 @@ body {
   }
   .container .intro p {
     font-size: 2rem;
+    width: 100%;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -549,6 +551,14 @@ body {
     align-items: center;
   }
 }
+@media only screen and (min-width: 600px) {
+  .container main .work-history .mobile .job header {
+    font-size: 2.25rem;
+  }
+  .container main .work-history .mobile .job section {
+    font-size: 2rem;
+  }
+}
 @media only screen and (min-width: 800px) {
   .container .main-section-header {
     font-size: 5.5rem;
@@ -570,6 +580,7 @@ body {
   .container header nav div.navigation:hover {
     color: white;
     font-size: 3rem;
+    padding: 1rem;
   }
   .container main .intro {
     width: 100%;
@@ -578,9 +589,12 @@ body {
     background: #3893ff;
     color: #ffffff;
   }
+  .container main .intro > p {
+    width: 100%;
+  }
   .container main .intro .tech-stack {
     font-size: 3rem;
-    width: 22%;
+    width: 26%;
     margin-right: 3rem;
     background: #ffffff;
     color: #000307;
@@ -624,8 +638,14 @@ body {
   }
   .container main .work-history .mobile .job {
     width: 29%;
-    font-size: 2.1rem;
-    padding: 3rem;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .container main .work-history .mobile section:last-child {
+    padding: 0 3rem;
+  }
+  .container main .work-history .mobile section:last-child > p {
+    font-size: 2rem;
   }
   .container main .contact .contact-information {
     background: #000307;

@@ -381,25 +381,41 @@ body {
 }
 .container header nav {
   background: #ffffff;
-  color: #000307;
+  color: #000000;
   display: flex;
   flex-direction: column;
 }
 .container header nav .navigation {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
-  border-bottom: 1.5px solid #000307;
+  border-bottom: 1.5px solid #000000;
   width: 100%;
 }
 .container header nav .navigation:hover {
-  background: #000307;
+  background: #000000;
   color: #3893ff;
   cursor: pointer;
 }
 .container header nav h1 {
   margin: 0;
   font-weight: bolder;
+  padding: 1rem;
+}
+.container header nav a {
+  color: #000000;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+.container header nav a:visited {
+  color: #000000;
+}
+.container header nav a:hover {
+  color: #3893ff;
+}
+.container header nav a:active {
+  color: #ffffff;
 }
 .container .main-section-header {
   display: flex;
@@ -421,7 +437,7 @@ body {
   box-shadow: 1px 1px 5px #000307;
   margin-bottom: 5rem;
   margin-top: 2rem;
-  color: #000307;
+  color: #000000;
   padding: 2rem;
   border-bottom: 1px solid gray;
   font-size: 1.5rem;
@@ -443,7 +459,7 @@ body {
   margin-bottom: 2rem;
 }
 .container main .intro .tech-stack:hover {
-  background: #000307;
+  background: #000000;
 }
 .container main .work-history {
   margin-bottom: 3rem;
@@ -466,11 +482,11 @@ body {
 .container main .work-history .mobile header {
   display: flex;
   justify-content: center;
-  color: #000307;
+  color: #000000;
   font-size: 1.5rem;
 }
 .container main .work-history .mobile section {
-  color: #000307;
+  color: #000000;
 }
 .container main .work-history .mobile section .date {
   display: flex;
@@ -577,10 +593,12 @@ body {
     border-color: #3893ff;
     color: #3893ff;
   }
+  .container header nav div.navigation a:hover {
+    padding: 0.5rem;
+  }
   .container header nav div.navigation:hover {
     color: white;
     font-size: 3rem;
-    padding: 1rem;
   }
   .container main .intro {
     width: 100%;

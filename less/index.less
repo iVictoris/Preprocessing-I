@@ -399,9 +399,9 @@ html {
 
 body {
   margin: 0;
-  background: rgb(56, 147, 255);
+  background: @blue;
   @media screen and (min-width: 800px) {
-    background: rgb(255, 255, 255);
+    background: @white;
   }
 }
 
@@ -430,7 +430,7 @@ body {
   border-radius: 1rem;
   width: 90%;
   margin: 0 auto;
-  background: rgb(255, 255, 255);
+  background: @white;
   padding: 5rem 5rem 0.5rem;
   box-shadow: 1px 1px 5px rgb(0, 3, 7);
   margin-bottom: 5rem;
@@ -443,30 +443,52 @@ body {
     1px 1px 0 rgb(77, 89, 104);
 }
 
+@white: rgb(255, 255, 255);
+@black: rgb(0, 0, 0);
+@blue: rgb(56, 147, 255);
+
 .container {
   font-size: 2rem;
-
   header {
     nav {
-      background: rgb(255, 255, 255);
-      color: rgb(0, 3, 7);
+      background: @white;
+      color: @black;
       .flex-stack();
 
       .navigation {
         .flex-center-row();
-        padding: 1.5rem;
-        border-bottom: 1.5px solid rgb(0, 3, 7);
+        border-bottom: 1.5px solid @black;
         width: 100%;
+
+        &:hover {
+          background: @black;
+          color: @blue;
+          cursor: pointer;
+        }
       }
 
-      .navigation:hover {
-        background: rgb(0, 3, 7);
-        color: rgb(56, 147, 255);
-        cursor: pointer;
-      }
       h1 {
         margin: 0;
         font-weight: bolder;
+        padding: 1rem;
+      }
+
+      a {
+        color: @black;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+
+        &:visited {
+          color: @black;
+        }
+        &:hover {
+          color: @blue;
+        }
+        &:active {
+          color: @white;
+        }
       }
     }
   }
@@ -475,7 +497,7 @@ body {
     font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 2rem;
-    color: rgb(255, 255, 255);
+    color: @white;
   }
 
   main {
@@ -484,7 +506,7 @@ body {
     .intro {
       .card();
       margin-top: 2rem;
-      color: rgb(0, 3, 7);
+      color: @black;
       padding: 2rem;
       border-bottom: 1px solid gray;
       font-size: 1.5rem;
@@ -492,8 +514,8 @@ body {
       flex-wrap: wrap;
       justify-content: space-evenly;
       .tech-stack {
-        background: rgb(56, 147, 255);
-        color: rgb(255, 255, 255);
+        background: @blue;
+        color: @white;
         box-shadow: 1px 1px 1px white;
         width: 55%;
         .flex-direct-center();
@@ -504,7 +526,7 @@ body {
       }
 
       .tech-stack:hover {
-        background: rgb(0, 3, 7);
+        background: @black;
       }
     }
 
@@ -513,19 +535,19 @@ body {
       .desktop {
         display: none;
 
-        .grid {
-          .grid-a {
-          }
+        // .grid {
+        //   .grid-a {
+        //   }
 
-          .grid-b {
-          }
+        //   .grid-b {
+        //   }
 
-          .grid-c {
-          }
+        //   .grid-c {
+        //   }
 
-          .grid-d {
-          }
-        }
+        //   .grid-d {
+        //   }
+        // }
       }
 
       .mobile {
@@ -538,12 +560,12 @@ body {
 
         header {
           .flex-center-row();
-          color: rgb(0, 3, 7);
+          color: @black;
           font-size: 1.5rem;
         }
 
         section {
-          color: rgb(0, 3, 7);
+          color: @black;
           .date {
             .flex-center-row();
 
@@ -676,19 +698,24 @@ body {
           font-size: 5rem;
           color: white;
           .text-outline();
-          border-color: rgb(56, 147, 255);
+          border-color: @blue;
         }
 
         div.navigation {
           font-size: 2.5rem;
-          border-color: rgb(56, 147, 255);
-          color: rgb(56, 147, 255);
+          border-color: @blue;
+          color: @blue;
+
+          a {
+            &:hover {
+              padding: .5rem;
+            }
+          }
         }
 
         div.navigation:hover {
           color: white;
           font-size: 3rem;
-          padding: 1rem
         }
       }
     }
@@ -698,8 +725,8 @@ body {
         width: 100%;
         border-radius: unset;
         font-size: 4rem;
-        background: rgb(56, 147, 255);
-        color: rgb(255, 255, 255);
+        background: @blue;
+        color: @white;
         & > p {
           width: 100%;
         }
@@ -707,13 +734,13 @@ body {
           font-size: 3rem;
           width: 26%;
           margin-right: 3rem;
-          background: rgb(255, 255, 255);
+          background: @white;
           color: rgb(0, 3, 7);
           box-shadow: 1px 1px 1px black;
         }
 
         .tech-stack:hover {
-          color: rgb(56, 147, 255);
+          color: @blue;
           box-shadow: 1px 1px 1px white;
         }
       }
@@ -736,7 +763,7 @@ body {
   @media only screen and (min-width: 1100px) {
     .main-section-header {
       font-size: 4rem;
-      color: rgb(56, 147, 255);
+      color: @blue;
       text-shadow: unset;
       box-shadow: unset;
       -webkit-text-stroke: unset;
@@ -766,14 +793,12 @@ body {
           section {
             &:last-child {
               padding: 0 3rem;
-              &>p {
+              & > p {
                 font-size: 2rem;
               }
             }
           }
         }
-
-
       }
 
       .contact {

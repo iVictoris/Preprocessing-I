@@ -501,6 +501,9 @@ body {
   }
 
   main {
+    &>img, & > .quote {
+      display: none;
+    }
     padding-top: 5rem;
 
     .intro {
@@ -688,6 +691,20 @@ body {
   }
 
   @media only screen and (min-width: 800px) {
+    .overlay {
+      background: white;
+      position: relative;
+      z-index: 0;
+    }
+
+    .jumbo-image {
+      width: 100vw;
+      height: 100%;
+      position: fixed;
+      z-index: -1;
+      top: -15vh;
+    }
+
     .main-section-header {
       font-size: 5.5rem;
       .text-outline();
@@ -708,7 +725,7 @@ body {
 
           a {
             &:hover {
-              padding: .5rem;
+              padding: 0.5rem;
             }
           }
         }
@@ -721,6 +738,17 @@ body {
     }
 
     main {
+      padding-top: 0;
+      &>img, & > .quote {
+        display: block;
+      }
+      .quote {
+        height: 65vh;
+        font-size: 4rem;
+        text-align: center;
+        padding: 10%;
+      }
+
       .intro {
         width: 100%;
         border-radius: unset;
@@ -767,6 +795,10 @@ body {
       text-shadow: unset;
       box-shadow: unset;
       -webkit-text-stroke: unset;
+      &.quote {
+        color: @white;
+        .text-outline();
+      }
     }
 
     main {
